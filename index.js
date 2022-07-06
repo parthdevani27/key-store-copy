@@ -99,5 +99,6 @@ function removeData(obj){
    var sure = confirm('Are you sure?')
    if(sure){
       localStorage.removeItem('data');
+      $(".appendData").hide()
    }
   });
