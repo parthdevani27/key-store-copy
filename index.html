@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Table V04</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" type="text/css" href="css/scroll.css">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<meta name="robots" content="noindex, follow">
+
+<body>
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+
+				<div class="table100 ver3 m-b-110">
+					<div class="table100-head">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Name</th>
+									<th class="cell100 column2">Password</th>
+									<th class="cell100 column3">Action</th>
+
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody class="appendData">
+
+					
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="upload-download text-right">
+		<button class="button-33 upload" role="button">upload</button>
+		<button class="button-33 download" role="button">download</button>
+		<button class="button-33 Add-data" role="button">Add</button>
+		<button class="button-33 clear-storage" role="button">Clear Storage</button>
+	</div>
+	<div class="upload-div hide-div">
+		<textarea class="upload-textarea"></textarea>
+		<button class="button-33 upload-data-button" role="button">upload</button>
+	</div>
+	<div class="download-div hide-div">
+		<textarea class="download-textarea"></textarea>
+	</div>
+
+	<div class="add-div hide-div">
+		<div class="form-bg">
+			<div class="color-bg">
+	
+					<div class="row">
+						<div class="col-md-5">
+							<div class="form-group">
+								<label class="label" for="name">Name</label>
+								<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="form-group">
+								<label class="label" for="email">Password</label>
+								<input type="text" class="form-control" name="Password" id="Password"
+									placeholder="Password">
+							</div>
+						</div>
+	
+						<div class="col-md-2">
+							<div class="form-group">
+								<button class="btn btn-info btn-default" onclick="AddData($(this))">Save</button>
+								<div class="submitting"></div>
+							</div>
+						</div>
+					</div>
+	
+	
+			</div>
+		</div>
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+	<script src="jquery.js"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>

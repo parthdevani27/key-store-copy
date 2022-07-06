@@ -1,0 +1,112 @@
+.form-bg{
+	padding: 70px;
+}
+.color-bg{
+	padding: 20px;
+	 background-color: #ddd;
+}
+.button-41 {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 200px;
+  margin-left:80px;
+  z-index: 9;
+  border: 0;
+}
+
+.button-41:hover {
+  background: #00bd68;
+}
+tbody .column2{
+  margin-left:80px;
+}
+.btn-default{
+  width: 130px;
+  margin-bottom: -70px;
+  height: 40px;
+}
+.form-group input{
+ border: 1px solid #706d6d !important;
+ border-radius: 10px;
+ padding: 5px;
+}
+.btn-delete{
+  color: rgb(189, 61, 61);
+  position: inherit;
+  margin: 10px !important;
+}
+
+
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+.upload-download{
+  /* margin-top: -150px; */
+  margin-right: 100px;
+}
+
+.hide-div{
+  display: none;
+}
+/* .wrap-table100{
+  top:-300px;
+  margin-top: -150px;
+} */
+textarea {
+  margin-left: 100px;
+  margin-right: 100px !important;
+  width: 800px;
+  min-height: 200px;
+  height: auto;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid rgb(129, 128, 128);
+  border-radius: 4px;
+  background-color: #ceefd2;
+  font-size: 16px;
+  resize: none;
+}
+.upload-data-button{
+  width: 100px;
+  margin-left: 800px;
+  margin-top: 10px;
+}
