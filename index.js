@@ -14,12 +14,15 @@ function copyToClip(obj) {
    }    
    document.body.removeChild( textArea ); 
 }
+function appendHtml(name,password){
+   return '<tr class="row100 body"><td class="cell100 column1">'+name+'</td><td class="cell100 column2">'+password+'</td><td class="cell100 column3"><button class="button-41" role="button"onclick="copyToClip($(this))">Copy</button> <a href="#" onclick="removeData($(this))" class="btn-delete">delete</a></td></tr>'
+}
 function AddData(obj){
    const pwd = $("#Password").val()
    const name = $("#name").val()
   if(pwd != '' && name != ''){
 
-   $(".appendData").append( '<tr class="row100 body"><td class="cell100 column1">'+name+'</td><td class="cell100 column2">'+pwd+'</td><td class="cell100 column3"><button class="button-41" role="button"onclick="copyToClip($(this))">Copy</button> <a href="#" onclick="removeData($(this))" class="btn-delete">delete</a></td></tr>' );
+   $(".appendData").append( appendHtml(name,pwd) );
 
    newData = {name:name,password:pwd}
    var storedData = localStorage.getItem("data");
@@ -61,7 +64,7 @@ function removeData(obj){
    var storedData = JSON.parse(localStorage.getItem("data"));
    if(storedData){
       storedData.forEach(function(item){
-         $(".appendData").append( '<tr class="row100 body"><td class="cell100 column1">'+item.name+'</td><td class="cell100 column2">'+item.password+'</td><td class="cell100 column3"><button class="button-41" role="button"onclick="copyToClip($(this))">Copy</button> <a href="#" onclick="removeData($(this))" class="btn-delete">delete</a></td></tr>' );
+         $(".appendData").append( appendHtml(item.name,item.password) );
       });
    }
 
@@ -82,23 +85,38 @@ function removeData(obj){
    $('.upload').on('click',function(){
       $(".upload-data-button").on('click',function(){
          var array = $(".upload-textarea").val();
-         if(array != ''){
-            localStorage.setItem("data",array);
-            $(".upload-div").addClass('hide-div')
-            array = JSON.parse(array);
-            array.forEach(function(item){
-               $(".appendData").append( '<tr class="row100 body"><td class="cell100 column1">'+item.name+'</td><td class="cell100 column2">'+item.password+'</td><td class="cell100 column3"><button class="button-41" role="button"onclick="copyToClip($(this))">Copy</button> <a href="#" onclick="removeData($(this))" class="btn-delete">delete</a></td></tr>' );
+         flag = false
+         try {
+            JSON.parse(array).forEach(function(item){
+               if(item.name && item.password){
+                  flag=true
+               }
             });
+            if(flag){
+               localStorage.setItem("data",array);
+               $(".upload-div").addClass('hide-div')
+               array = JSON.parse(array);
+               $(".appendData").empty();
+               array.forEach(function(item){
+                  $(".appendData").append( appendHtml(item.name,item.password) );
+               });
+            } else {
+               alert('Invalid input');
+            }
+         }
+         catch(err) {
+            alert(err);
          }
       });
       $(".add-div").addClass('hide-div')
       $(".download-div").addClass('hide-div')
       $(".upload-div").toggleClass('hide-div')
    });
-  $(".clear-storage").on('click',function(){
-   var sure = confirm('Are you sure?')
-   if(sure){
-      localStorage.removeItem('data');
-      $(".appendData").hide()
-   }
-  });
+
+   $(".clear-storage").on('click',function(){
+      var sure = confirm('Are you sure?')
+      if(sure){
+         localStorage.removeItem('data');
+         $(".appendData").hide()
+      }
+   });

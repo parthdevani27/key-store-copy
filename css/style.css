@@ -3,7 +3,7 @@
 }
 .color-bg{
 	padding: 20px;
-	 background-color: #ddd;
+	 background-color: #ceefd2;
 }
 .button-41 {
   background-color: initial;
@@ -27,7 +27,7 @@
   -webkit-user-select: none;
   vertical-align: top;
   white-space: nowrap;
-  width: 200px;
+  width: 100px;
   margin-left:80px;
   z-index: 9;
   border: 0;
@@ -41,7 +41,8 @@ tbody .column2{
 }
 .btn-default{
   width: 130px;
-  margin-bottom: -70px;
+  margin-top:30px ;
+  /* margin-bottom: -70px; */
   height: 40px;
 }
 .form-group input{
@@ -50,9 +51,33 @@ tbody .column2{
  padding: 5px;
 }
 .btn-delete{
-  color: rgb(189, 61, 61);
+  /* color: rgb(189, 61, 61);
   position: inherit;
-  margin: 10px !important;
+  margin: 10px !important; */
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #fc5a48bf, #f45239e2);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+  z-index: 9;
+  border: 0;
 }
 
 
@@ -110,3 +135,4 @@ textarea {
   margin-left: 800px;
   margin-top: 10px;
 }
+
