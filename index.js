@@ -15,6 +15,7 @@ function copyToClip(obj) {
    document.body.removeChild( textArea ); 
 }
 function appendHtml(name,password){
+   password = password.substring(0,60)
    return '<tr class="row100 body"><td class="cell100 column1">'+name+'</td><td class="cell100 column2">'+password+'</td><td class="cell100 column3"><button class="button-41" role="button"onclick="copyToClip($(this))">Copy</button> <a href="#" onclick="removeData($(this))" class="btn-delete">delete</a></td></tr>'
 }
 function AddData(obj){
