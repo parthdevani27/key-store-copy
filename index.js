@@ -1,6 +1,13 @@
 function copyToClip(obj) {
    var textArea = document.createElement( "textarea" );
-   textArea.value = obj.parent().prev().text();
+   	var storedData = JSON.parse(localStorage.getItem("data"));
+      if(storedData){
+         storedData.forEach(function(item){
+            if(item.name == obj.parent().prev().prev().text() &&item.password.substring(0,60) == obj.parent().prev().text().substring(0,60)){
+                textArea.value = item.password
+            }
+         });
+      }
    document.body.appendChild( textArea );       
    textArea.select();
 
@@ -15,7 +22,10 @@ function copyToClip(obj) {
    document.body.removeChild( textArea ); 
 }
 function appendHtml(name,password){
-   password = password.substring(0,60)
+	if(password.length > 60){
+		password = password.substring(0,60) + '...'
+	}
+   
    return '<tr class="row100 body"><td class="cell100 column1">'+name+'</td><td class="cell100 column2">'+password+'</td><td class="cell100 column3"><button class="button-41" role="button"onclick="copyToClip($(this))">Copy</button> <a href="#" onclick="removeData($(this))" class="btn-delete">delete</a></td></tr>'
 }
 function AddData(obj){
